@@ -21,7 +21,31 @@ Install using `pip`...
 
 # Example
 
-You wire up your generic views in the same way:
+Make sure you're using a versioning class in your `settings.py` (Rest Framework does not default to any versioning class)
+
+```python
+
+REST_FRAMEWORK = {
+	'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.AcceptHeaderVersioning'
+}
+
+```
+
+Ensure you're using namespacing on your endpoints
+
+```python
+
+urlpatterns = patterns(
+    '',
+    url(r'^api/', include(patterns(
+        '',
+        url(r'^items/', include('items.urls')),
+    ), namespace='1.0')),
+)
+
+```
+
+You wire up your generic view URL's in the same way as before:
 
 ```python
 from django.conf.urls import url
