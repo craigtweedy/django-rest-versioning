@@ -17,7 +17,7 @@ This mixin allows the developer to set which class is ran depending on what vers
 
 Install using `pip`...
 
-    pip install django-rest-versioning
+    pip install djangorestversioning
 
 # Example
 
@@ -36,6 +36,8 @@ urlpatterns = [
 Ensure the resulting generic view has the versioning mixin, and that you provide a versions dictionary detailing where each version of the endpoint exists.
 
 ```python
+
+from djangorestversioning import versioning
 
 class ItemList(VersionedEndpoint, APIView):
 	"""
@@ -77,8 +79,8 @@ If you request a version which does not have a corresponding entry in the versio
 
 If a module or class is not found, an `ImportError` or `AttributeError` will be raised.
 
-[pypi-version]: https://img.shields.io/pypi/v/django-rest-versioning.svg
-[pypi]: https://pypi.python.org/pypi/django-rest-versioning
+[pypi-version]: https://img.shields.io/pypi/v/djangorestversioning.svg
+[pypi]: https://pypi.python.org/pypi/djangorestversioning
 
 
 [docs]: http://www.django-rest-framework.org/
