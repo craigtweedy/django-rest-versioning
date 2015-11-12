@@ -61,7 +61,7 @@ Ensure the resulting generic view has the versioning mixin, and that you provide
 
 ```python
 
-from djangorestversioning import versioning
+from djangorestversioning.versioning import VersionedEndpoint
 
 class ItemList(VersionedEndpoint, APIView):
 	"""
