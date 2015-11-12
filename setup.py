@@ -3,6 +3,7 @@ setup(
   name = 'djangorestversioning',
   packages = ['djangorestversioning'],
   version = '0.2.1',
+  license='MIT',
   description = 'A lightweight mixin to allow routing Django Rest Framework endpoints to different classes depending on version.',
   author = 'Craig Tweedy',
   author_email = 'ahoy@craigtweedy.co.uk',
