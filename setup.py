@@ -7,7 +7,7 @@ setup(
   author = 'Craig Tweedy',
   author_email = 'ahoy@craigtweedy.co.uk',
   url = 'https://github.com/craigtweedy/django-rest-versioning',
-  download_url = 'https://github.com/craigtweedy/django-rest-versioning/tarball/0.1', # I'll explain this in a second
+  download_url = 'https://github.com/craigtweedy/django-rest-versioning/tarball/0.1',
   keywords = ['django', 'django-rest-framework', 'version', 'versioning', 'api'],
   classifiers = [],
 )
