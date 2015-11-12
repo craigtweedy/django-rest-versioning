@@ -24,7 +24,7 @@ Install using `pip`...
 You wire up your generic views in the same way:
 
 ```python
-from django.conf.urls import url, include
+from django.conf.urls import url
 from items.views import ItemList
 
 # Wire up your API using generic views
@@ -41,7 +41,7 @@ from djangorestversioning import versioning
 
 class ItemList(VersionedEndpoint, APIView):
 	"""
-	List all crazes.
+	List all items.
 	"""
 	versions = {
 		1.0 : 'api.v1.items.ItemList',
