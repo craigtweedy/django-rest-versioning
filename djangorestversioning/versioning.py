@@ -39,9 +39,11 @@ class VersionedEndpoint:
 			if hasattr(self, 'versions') is False:
 				raise Exception("Attempted to use a versioned endpoint without specifying versions. VersionedEndpoint requires a 'self.versions' dictionary")
 
-			version = self.determine_version(self.request, *args, **kwargs)
-			version = self.numerical_version(version[0])
-			version_class = self.versions.get(version, None)
+			version_class = None
+			version = self.determine_version(self.request, *args, **kwargs)[0]
+			if version is not None:
+				version = self.numerical_version(version)
+				version_class = self.versions.get(version, None)
 			if version_class is None:
 				version_keys = self.versions.keys()
 				latest_version = max(version_keys)
